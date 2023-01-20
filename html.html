@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Quote Generator🚀;</title>
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/anurati');
+      /* Set the background to a space image */
+      body {
+        background-image: url(https://images.unsplash.com/photo-1531160492875-2a09eb0cd73b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+        background-size: cover;
+        font-family: 'Anurati', sans-serif;
+        text-align: center;
+        padding: 50px;
+        color: white;
+           
+
+
+      }
+
+      h1 {
+        color: #f8fcfe;
+        text-shadow: 0px 0px 10px #8b5187, 0px 0px 20px #8b5187, 0px 0px 30px #8b5187, 0px 0px 40px #8b5187, 0px 0px 70px #8b5187, 0px 0px 80px #8b5187, 0px 0px 100px #8b5187, 0px 0px 150px #8b5187;
+        font-size: 60px;
+        margin-bottom: 50px;
+      }
+      
+     /* Style the quote box */
+     .quote-box {
+        border: 1px solid gray;
+        padding: 20px;
+        margin: 20px;
+        background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%);
+        box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.8);
+        transform: rotateX(30deg) rotateY(30deg);
+        transition: all 0.5s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family:sans-serif;
+        opacity: 85%;
+      }
+      
+      /* Style the quote text */
+      .quote-text {
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px black;
+      }
+      
+      /* Style the button */
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        /* Add a hover effect to the button */
+        transition: background-color 0.3s;
+      }
+      
+      /* Change the button's background color on hover */
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Quote Generator</h1>
+    <div class="quote-box">
+      <p class="quote-text">Life is like riding a bicycle. To keep your balance, you must keep moving.</p>
+      <button id="new-quote-btn" onclick="getNewQuote()">New Quote</button>
+    </div>
+    
+    <script>
+      // An array of quotes
+      const quotes = [
+        "“Love one another, but make not a bond of love:Let it rather be a moving sea between the shores of your souls.”― Khalil Gibran, The Prophet",
+        "“The three rules of the Librarians of Time and Space are: 1) Silence; 2) Books must be returned no later than the last date shown; and 3) Do not interfere with the nature of causality.”― Terry Pratchett, Guards! Guards!",
+        "“Depression isn't a war you win. It's a battle you fight every day. You never stop, never get to rest. It's one bloody fray after another.”― Shaun David Hutchinson, We Are the Ants",
+        "“Stuart needs space and time, as if this were physics and not a human relationship.”― Kathryn Stockett, The Help",
+        "“I saw the world from the stars' point of view, and it looked unbearably lonely.”― Shaun David Hutchinson, We Are the Ants",
+        "“That's what it feels like when you touch me. Like millions of tiny universes being born and then dying in the space between your finger and my skin. Sometimes I forget.”― Iain Thomas, I Wrote This For You",
+        "“Beyond the edge of the world there’s a space where emptiness and substance neatly overlap, where past and future form a continuous, endless loop. And, hovering about, there are signs no one has ever read, chords no one has ever heard.”― Haruki Murakami, Kafka on the Shore",
+        "“Real museums are places where Time is transformed into Space.”― Orhan Pamuk, The Museum of Innocence",
+        "“It's so stupid because all I wanted was space and now that I have it, there's this part of me that's achingly lonely I could die.”― Hannah Harrington, Saving June",
+        "“Without pain, without sacrifice we would have nothing. Like the first monkey shot into space.”― Chuck Palahniuk, Fight Club",
+        "“We're not words, Henry, we're people.Words are how others define us, but we can define ourselves any way we choose.”― Shaun David Hutchinson, We Are the Ants",
+        "“How dare you open a spaceman's helmet on an uncharted planet? My eyeballs could've been sucked from their sockets! ― Cathy East Dubowski, Disney's Toy Story “",
+        "“I should say: the house shelters day-dreaming, the house protects the dreamer, the house allows one to dream in peace.”― Gaston Bachelard , The Poetics of Space",
+        "“In the vastness of space and the immensity of time, it is my joy to share a planet and an epoch with Annie.”[Dedication to Sagan's wife, Ann Druyan, in Cosmos]”― Carl Sagan, Cosmos",
+        "“The moment that judgement stops through acceptance of what it is, you are free of the mind. You have made room for love, for joy, for peace.”― Eckhart Tolle, Practicing the Power of Now: Essential Teachings, Meditations, and Exercises from the Power of Now",
+        "“You see,she concluded miserably,when I can call like that to him across space--I belong to him. He doesn't love me--he never will--but I belong to him.”― L.M. Montgomery, Emily's Quest",
+        "“It suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth. I didn't feel like a giant. I felt very, very small.”― Neil Armstrong",
+        "“In the space between chaos and shape there was another chance.”― Jeanette Winterson, The World and Other Places: Stories",
+        "“Emptiness which is conceptually liable to be mistaken for sheer nothingness is in fact the reservoir of infinite possibilities.”― Daisetz Teitaro Suzuki",
+      ];
+      
+      // Get a random quote from the array and display it on the page
+      function getNewQuote() {
+        const quoteText = document.querySelector(".quote-text");
+        quoteText.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+      }
+    </script>
+  </body>
+</html>
